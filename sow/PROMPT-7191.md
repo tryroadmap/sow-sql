@@ -1,12 +1,17 @@
 ### Query Request Scope of Work (SOW)
 ## From:
-Two tables containing data on customers and their spending on products in different categories.
+Two tables containing data on Social Media app users, including their age and time spent sending and recieving messages on the platform.
 
 ## Query Request Description:
-update the payment status of advertisers based on the information in the daily_pay table. The output should include the user ID and their current payment status, sorted by the user id.  
-
+obtain a breakdown of the time spent sending vs. opening messages as a percentage of total time spent on the platform grouped by age group. Round the percentage to 2 decimal places in the output.
 ## Expected (columns in order):
-user ID and their current payment status, sorted by the user id.
+age_bucket,	send_perc,	open_perc ID 
+
+## Notes
+Calculate the following percentages:
+- time spent sending / (Time spent sending + Time spent opening)
+- Time spent opening / (Time spent sending + Time spent opening)
+To avoid integer division in percentages, multiply by 100.0 and not 100.
 
 ## Tables
 
@@ -35,18 +40,18 @@ user ID and their current payment status, sorted by the user id.
 | ------------- | ------------------------- |	
 | Table count(s)|	2                       |    
 | TABLE_NAME    | activities, age_breakdown |
-| COLUMNS       | see previous tables       |
-| SELECT	    |category,                  |
-|FROM	        |product_spend              |
-|WHERE	        |EXTRACT(YEAR FROM transaction_date) = 2022      |
-|GROUPBY        |	category, product       |
-|HAVING	        |Na                         |
-|ORDER	        |Na                         |
+| COLUMNS       | see  tables               |
+| SELECT	    |Recommended                   |
+|FROM	        |activities              |
+|WHERE	        |Recommended      |
+|GROUPBY        |	age_bucket       |
+|HAVING	        |not required                         |
+|ORDER	        |not required                         |
 |WITH Clause    |	Recommended             |
-|CREATE PARTITION  |	Na                  |
-|CREATE INDEX   |	Na                      |
-|INNER JOIN     |	Na                      |
-|OUTER/LEFT/RIGHT       | JOIN	Na          |
+|CREATE PARTITION  |	not required                  |
+|CREATE INDEX   |	not required                      |
+|INNER JOIN     |	ON activities.user_id = age.user_id                |
+|OUTER/LEFT/RIGHT       | 	not required          |
 |SHOULD MANAGE NULLS        |	Recommended |
 	
 	
