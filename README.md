@@ -14,6 +14,7 @@ You can simply copy-paste the prompt entire .md file.
 
 
 ### Directory
+```
 .
 └── sow-sql
     ├── LICENSE
@@ -28,6 +29,7 @@ You can simply copy-paste the prompt entire .md file.
         └── PROMPT-7193.md
 
 3 directories, 8 files
+```
 
 ### Demo
 Below is a sample prompt layout for generating queries of varying difficulty, from simple to medium complexity. You will find three prompts in the "sow" folders, and for each prompt, there are both manual and GPT-4 generated scripts listed under the "scripts" folder.
