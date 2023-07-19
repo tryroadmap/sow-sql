@@ -46,3 +46,4 @@ user_id, tweet_date, and rolling averages rounded to 2 decimal places.
 |SHOULD MANAGE NULLS     |  	not required|
 	
 	
+[Reference: Test this SQL on DataLemur from here](https://datalemur.com/questions/rolling-average-tweets).

@@ -55,3 +55,4 @@ To avoid integer division in percentages, multiply by 100.0 and not 100.
 |SHOULD MANAGE NULLS        |	Recommended |
 	
 	
+[Reference: Test this SQL on DataLemur from here](https://datalemur.com/questions/time-spent-snaps).

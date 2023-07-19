@@ -48,3 +48,4 @@ na
 |SHOULD MANAGE NULLS        |	not required |
 	
 	
+[Reference: Test this SQL on DataLemur from here](https://datalemur.com/questions/sql-highest-grossing).
